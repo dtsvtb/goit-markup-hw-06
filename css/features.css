@@ -6,7 +6,7 @@
 .features .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px 24px; /* FIX: вертикальний 72px */
 }
 
 /* DESKTOP 4 КОЛОНИ */
@@ -31,7 +31,7 @@
   margin-bottom: 8px;
 }
 
-/* TITLE */
+/* TITLE (DESKTOP BASE) */
 .features .subtitle {
   color: #2e2f42;
   font-size: 20px;
@@ -65,8 +65,15 @@
     display: none;
   }
 
+  /* FIX: typography tablet */
   .features .subtitle {
-    text-align: left;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+  }
+
+  .features .text {
+    font-weight: 500;
   }
 }
 
@@ -78,6 +85,7 @@
 
   .features .list {
     flex-direction: column;
+    gap: 72px; /* FIX: як в вимозі */
   }
 
   .features li {
@@ -88,10 +96,11 @@
     display: none;
   }
 
+  /* FIX: mobile typography */
   .features .subtitle {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.11;
     text-align: center;
   }
 
