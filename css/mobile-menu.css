@@ -14,14 +14,15 @@
 
   z-index: 999;
 
-  transition:
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   padding: 72px 16px 40px;
 
   display: flex;
   flex-direction: column;
+
+  overflow-y: auto; /* FIX */
 }
 
 .mobile-menu.is-open {
@@ -30,38 +31,14 @@
   pointer-events: auto;
 }
 
-.menu-open-btn {
-  display: none;
-
-  padding: 0;
-  border: none;
-  background-color: transparent;
-
-  cursor: pointer;
-}
-
-.mobile-menu-close-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-
-  width: 24px;
-  height: 24px;
-
+/* INNER WRAPPER */
+.mobile-menu-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0;
-
-  border-radius: 50%;
-  border: 1px solid rgba(46, 47, 66, 0.1);
-
-  background-color: transparent;
-
-  cursor: pointer;
+  flex-direction: column;
+  height: 100%;
 }
 
+/* NAV */
 .mobile-nav {
   margin-bottom: auto;
 }
@@ -74,13 +51,13 @@
 
 .mobile-nav a {
   text-decoration: none;
-
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
-
   color: #2e2f42;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-nav a:hover,
@@ -88,6 +65,7 @@
   color: #404bbf;
 }
 
+/* CONTACTS */
 .mobile-address {
   font-style: normal;
   margin-bottom: 48px;
@@ -101,23 +79,26 @@
 
 .mobile-address a {
   text-decoration: none;
-
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
 
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-address .phone {
+  color: #4d5ae5;
+}
+
+.mobile-address .email {
   color: #434455;
 }
 
-.mobile-address a:hover,
-.mobile-address a:focus {
-  color: #404bbf;
-}
-
+/* SOCIALS */
 .mobile-socials {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 40px;
 }
 
@@ -144,6 +125,11 @@
   fill: #f4f4fd;
 }
 
+/* BUTTON */
+.menu-open-btn {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   .menu-open-btn {
     display: flex;
@@ -154,11 +140,6 @@
   .nav,
   .address {
     display: none;
-  }
-
-  .header .container {
-    padding-top: 16px;
-    padding-bottom: 16px;
   }
 }
 
