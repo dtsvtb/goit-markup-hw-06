@@ -51,21 +51,22 @@ ul {
 
 .container {
   width: 100%;
-  max-width: 1158px;
-  margin: 0 auto;
+  max-width: 320px;
   padding: 0 16px;
+  margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+/* TABLET */
+@media (min-width: 768px) {
   .container {
     max-width: 768px;
   }
 }
 
-@media screen and (min-width: 1158px) {
+/* DESKTOP */
+@media (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    padding: 0 15px;
   }
 }
 

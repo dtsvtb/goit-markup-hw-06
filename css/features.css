@@ -1,15 +1,15 @@
 .features {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 /* LIST */
 .features .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 72px 24px; /* FIX: вертикальний 72px */
+  gap: 72px 24px;
 }
 
-/* DESKTOP 4 КОЛОНИ */
+/* DESKTOP */
 .features li {
   flex-basis: calc((100% - 72px) / 4);
 }
@@ -31,41 +31,29 @@
   margin-bottom: 8px;
 }
 
-/* TITLE (DESKTOP BASE) */
+/* TITLE BASE */
 .features .subtitle {
-  color: #2e2f42;
   font-size: 20px;
-  line-height: 1.2;
   font-weight: 500;
-  letter-spacing: 0.02em;
-
+  line-height: 1.2;
+  color: #2e2f42;
   margin-bottom: 8px;
 }
 
-/* TEXT */
+/* TEXT BASE */
 .features .text {
-  color: #434455;
   font-size: 16px;
-  line-height: 1.5;
   font-weight: 400;
-  letter-spacing: 0.02em;
+  line-height: 1.5;
+  color: #434455;
 }
 
-/* ================= TABLET ================= */
-@media screen and (min-width: 768px) and (max-width: 1157px) {
-  .features {
-    padding: 96px 0;
-  }
-
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1157px) {
   .features li {
     flex-basis: calc((100% - 24px) / 2);
   }
 
-  .icon-box {
-    display: none;
-  }
-
-  /* FIX: typography tablet */
   .features .subtitle {
     font-size: 36px;
     font-weight: 700;
@@ -77,26 +65,17 @@
   }
 }
 
-/* ================= MOBILE ================= */
-@media screen and (max-width: 767px) {
-  .features {
-    padding: 96px 0;
-  }
-
+/* MOBILE */
+@media (max-width: 767px) {
   .features .list {
     flex-direction: column;
-    gap: 72px; /* FIX: як в вимозі */
+    gap: 72px;
   }
 
   .features li {
     flex-basis: 100%;
   }
 
-  .icon-box {
-    display: none;
-  }
-
-  /* FIX: mobile typography */
   .features .subtitle {
     font-size: 36px;
     font-weight: 700;
