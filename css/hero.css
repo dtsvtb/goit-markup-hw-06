@@ -140,3 +140,20 @@
       url("../images/hero-desktop@2x.jpg");
   }
 }
+.main-title {
+  margin-bottom: 72px; /* mobile default */
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+  .main-title {
+    margin-bottom: 36px;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1158px) {
+  .main-title {
+    margin-bottom: 48px;
+  }
+}
