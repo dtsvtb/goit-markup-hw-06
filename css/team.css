@@ -1,0 +1,118 @@
+.team {
+  background-color: #f4f4fd;
+  padding: 120px 0;
+}
+
+.team .title {
+  color: #2e2f42;
+  font-size: 36px;
+  line-height: 1.11;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.team .list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team .item {
+  background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+  box-shadow:
+    0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.team .subtitle {
+  color: #2e2f42;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.team .text {
+  color: #434455;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.team img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.team .card-content {
+  padding: 32px 16px;
+}
+
+.card-content .link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-content .link:hover,
+.card-content .link:focus {
+  background-color: #404bbf;
+}
+
+.card-content .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ================= TABLET ================= */
+
+@media screen and (max-width: 1157px) {
+  .team {
+    padding: 96px 0;
+  }
+
+  .team .list {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 64px;
+    column-gap: 24px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media screen and (max-width: 767px) {
+  .team {
+    padding: 96px 0;
+  }
+
+  .team .list {
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+  }
+
+  .team .item {
+    width: 264px;
+  }
+}

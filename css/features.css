@@ -1,0 +1,52 @@
+/* Tablet */
+
+@media screen and (max-width: 1157px) {
+  .features {
+    padding: 96px 0;
+  }
+
+  .features .list {
+    flex-wrap: wrap;
+    row-gap: 72px;
+  }
+
+  .features li {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .icon-box {
+    display: none;
+  }
+
+  .features .subtitle {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    text-align: left;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 767px) {
+  .features {
+    padding: 96px 0;
+  }
+
+  .features .list {
+    flex-direction: column;
+    gap: 72px;
+  }
+
+  .features li {
+    width: 100%;
+  }
+
+  .features .subtitle {
+    text-align: center;
+  }
+
+  .features .text {
+    font-weight: 500;
+  }
+}
