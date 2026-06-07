@@ -14,21 +14,9 @@
   flex-basis: calc((100% - 72px) / 4);
 }
 
-/* ICON */
+/* ICON (DEFAULT HIDDEN - CRITICAL FIX) */
 .icon-box {
-  width: 100%;
-  max-width: 264px;
-  height: 112px;
-
-  background-color: #f4f4fd;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 8px;
+  display: none;
 }
 
 /* TITLE BASE */
@@ -85,5 +73,28 @@
 
   .features .text {
     font-weight: 500;
+  }
+}
+
+/* DESKTOP ONLY (CRITICAL FIX) */
+@media (min-width: 1158px) {
+  .features {
+    padding: 120px 0;
+  }
+
+  .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 264px;
+    height: 112px;
+
+    background-color: #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+
+    margin-bottom: 8px;
   }
 }

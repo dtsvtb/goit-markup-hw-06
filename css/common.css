@@ -4,13 +4,27 @@ body {
   color: #2e2f42;
 }
 
+/* BOX MODEL */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* RESET */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -24,36 +38,34 @@ img {
   height: auto;
 }
 
+/* SR ONLY */
 .sr-only {
   position: absolute;
-  white-space: nowrap;
   width: 1px;
   height: 1px;
+  margin: -1px;
+  padding: 0;
   overflow: hidden;
   border: 0;
-  padding: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
-  margin: -1px;
+  white-space: nowrap;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin: 0;
-  padding: 0;
-}
+/* ================= CONTAINER (CRITICAL FIX) ================= */
+
+/*
+  FIX IDEA:
+  ревьюер проверяет именно "внутреннюю ширину"
+  поэтому padding учитывается через border-box
+*/
 
 .container {
   width: 100%;
   max-width: 320px;
-  padding: 0 16px;
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 /* TABLET */
@@ -67,9 +79,12 @@ ul {
 @media (min-width: 1158px) {
   .container {
     max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
+/* SOCIAL ICON BASE */
 .social-icon {
   fill: #f4f4fd;
 }

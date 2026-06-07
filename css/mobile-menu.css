@@ -11,13 +11,22 @@
   flex-direction: column;
 
   padding: 72px 16px 40px;
-  transition: 250ms ease;
+
+  transition: opacity 250ms ease, visibility 250ms ease;
 }
 
+/* OPEN STATE */
 .mobile-menu.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+/* HIDE ON TABLET + DESKTOP (CRITICAL FIX) */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 /* NAV */
@@ -31,8 +40,17 @@
   gap: 40px;
 }
 
+.mobile-nav a {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
 /* CONTACTS */
 .mobile-address {
+  font-style: normal;
   margin-bottom: 48px;
 }
 
@@ -42,16 +60,62 @@
   gap: 24px;
 }
 
-/* SOCIAL (FIX ALIGNMENT) */
+.mobile-address a {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+/* PHONE (ACCENT COLOR) */
+.mobile-address .phone {
+  color: #4d5ae5;
+}
+
+/* EMAIL */
+.mobile-address .email {
+  color: #434455;
+}
+
+/* SOCIAL */
 .mobile-socials {
   display: flex;
   justify-content: flex-start;
   gap: 40px;
 }
 
-/* BUTTON */
+.mobile-socials a {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: #4d5ae5;
+}
+
+.mobile-socials svg {
+  fill: #f4f4fd;
+}
+
+/* CLOSE BUTTON */
 .mobile-menu-close-btn {
   position: absolute;
   top: 24px;
   right: 24px;
+
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 1px solid rgba(46, 47, 66, 0.1);
+  background: transparent;
+  cursor: pointer;
 }
