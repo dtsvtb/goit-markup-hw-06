@@ -13,7 +13,7 @@
   color: #2e2f42;
 }
 
-/* LIST (DEFAULT DESKTOP 4 COL) */
+/* LIST */
 .team .list {
   display: flex;
   gap: 24px;
@@ -33,9 +33,9 @@
 
 /* IMAGE */
 .team img {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
 }
 
 /* CONTENT */
@@ -79,7 +79,6 @@
 
   background-color: #4d5ae5;
   border-radius: 50%;
-
   transition: background-color 250ms ease;
 }
 
@@ -94,11 +93,16 @@
     padding: 96px 0;
   }
 
+  /* FIX 1: visually narrower block */
   .team .list {
     flex-wrap: wrap;
+    max-width: 552px;
+    margin: 0 auto;
+    column-gap: 24px;
+    row-gap: 64px;
   }
 
-  /* CRITICAL FIX: 2 COLUMNS */
+  /* FIX 2: 2 columns */
   .team .item {
     flex-basis: calc((100% - 24px) / 2);
   }
@@ -116,7 +120,6 @@
     gap: 72px;
   }
 
-  /* FIX: consistent card width */
   .team .item {
     width: 264px;
     flex-basis: auto;

@@ -9,12 +9,12 @@
   gap: 72px 24px;
 }
 
-/* DESKTOP */
+/* DESKTOP 4 COL */
 .features li {
   flex-basis: calc((100% - 72px) / 4);
 }
 
-/* ICON (DEFAULT HIDDEN - CRITICAL FIX) */
+/* ICON - ONLY DESKTOP */
 .icon-box {
   display: none;
 }
@@ -24,6 +24,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
+  letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
 }
@@ -33,10 +34,11 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #434455;
 }
 
-/* TABLET */
+/* ================= TABLET ================= */
 @media (min-width: 768px) and (max-width: 1157px) {
   .features li {
     flex-basis: calc((100% - 24px) / 2);
@@ -53,11 +55,10 @@
   }
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media (max-width: 767px) {
   .features .list {
     flex-direction: column;
-    gap: 72px;
   }
 
   .features li {
@@ -76,7 +77,7 @@
   }
 }
 
-/* DESKTOP ONLY (CRITICAL FIX) */
+/* ================= DESKTOP ONLY ================= */
 @media (min-width: 1158px) {
   .features {
     padding: 120px 0;

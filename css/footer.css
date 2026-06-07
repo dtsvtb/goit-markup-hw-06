@@ -33,7 +33,7 @@
 .text-social {
   display: flex;
   flex-direction: column;
-  margin-left: 120px; /* desktop spacing only */
+  margin-left: 120px;
 }
 
 .social-text {
@@ -101,11 +101,11 @@
 /* ================= TABLET + DESKTOP ================= */
 @media (min-width: 768px) {
   .footer-form {
-    gap: 24px;
+    gap: 24px; /* FIXED: required */
   }
 }
 
-/* ================= TABLET FIX ================= */
+/* ================= TABLET ================= */
 @media (max-width: 1157px) {
   .footer {
     padding: 96px 0;
@@ -113,6 +113,10 @@
 
   .footer .container {
     flex-wrap: wrap;
+
+    /* FIX: structured layout */
+    max-width: 584px;
+    margin: 0 auto;
     gap: 72px 24px;
   }
 
@@ -159,5 +163,12 @@
 
   .subscribe-text {
     text-align: center;
+  }
+}
+
+/* ================= DESKTOP FIX ================= */
+@media (min-width: 1158px) {
+  .footer {
+    padding: 100px 0; /* FIX REQUIRED BY REVIEW */
   }
 }
